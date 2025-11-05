@@ -28,6 +28,7 @@ YOLOv11은 Ultralytics에서 2024년에 출시한 **최신 실시간 객체 탐�
 - 🎨 **다목적**: 탐지, 분류, 세그멘테이션, 포즈 추정 등 다양한 작업 지원
 
 ---
+<img width="1126" height="506" alt="image" src="https://github.com/user-attachments/assets/f494d02c-6689-44d9-89ce-3c1ae08df7d2" />
 
 ## 주요 특징
 
