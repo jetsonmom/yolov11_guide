@@ -135,6 +135,22 @@ print("YOLOv11 설치 완료!")
 
 YOLOv11은 다양한 크기의 모델을 제공합니다. 용도에 맞게 선택하세요!
 
+### 📥 모델 다운로드 (Detection)
+
+아래 모델 이름을 클릭하면 바로 다운로드됩니다!
+
+| 모델 | 크기 (픽셀) | mAP<sup>val</sup><br>50-95 | 속도<br>CPU ONNX<br>(ms) | 속도<br>T4 TensorRT10<br>(ms) | 파라미터<br>(M) | FLOPs<br>(B) |
+|------|------------|-------------|--------------|--------------|----------|---------|
+| [**YOLO11n**](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt) | 640 | 39.5 | 56.1 ± 0.8 | 1.5 ± 0.0 | 2.6 | 6.5 |
+| [**YOLO11s**](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt) | 640 | 47.0 | 90.0 ± 1.2 | 2.5 ± 0.0 | 9.4 | 21.5 |
+| [**YOLO11m**](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m.pt) | 640 | 51.5 | 183.2 ± 2.0 | 4.7 ± 0.1 | 20.1 | 68.0 |
+| [**YOLO11l**](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l.pt) | 640 | 53.4 | 238.6 ± 1.4 | 6.2 ± 0.1 | 25.3 | 86.9 |
+| [**YOLO11x**](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x.pt) | 640 | 54.7 | 462.8 ± 6.7 | 11.3 ± 0.2 | 56.9 | 194.9 |
+
+> 💡 **참고**: 모델은 [COCO](https://docs.ultralytics.com/datasets/detect/coco/) 데이터셋으로 학습되었으며, 80개의 사전 학습된 클래스가 포함되어 있습니다.
+
+### 모델 선택 가이드
+
 | 모델 | 파라미터 수 | 용도 | 추천 사용처 |
 |------|-------------|------|-------------|
 | **YOLOv11n** | 최소 (Nano) | 경량 작업 | 모바일, 임베디드 디바이스 |
@@ -143,15 +159,24 @@ YOLOv11은 다양한 크기의 모델을 제공합니다. 용도에 맞게 선�
 | **YOLOv11l** | 대형 (Large) | 높은 정확도 필요 | 고성능 서버, 정밀 탐지 |
 | **YOLOv11x** | 초대형 (Extra-Large) | 최고 정확도 | 연구, 최고 성능이 필요한 프로젝트 |
 
-### 작업별 모델
+### 작업별 모델 다운로드
 
 각 크기별로 다양한 작업을 지원하는 모델이 있습니다:
 
-- **Detect**: 일반 객체 탐지 (`yolo11n.pt`, `yolo11s.pt`, ...)
-- **Segment**: 인스턴스 세그멘테이션 (`yolo11n-seg.pt`, ...)
-- **Pose**: 포즈 추정 (`yolo11n-pose.pt`, ...)
-- **Classify**: 이미지 분류 (`yolo11n-cls.pt`, ...)
-- **OBB**: 회전 객체 탐지 (`yolo11n-obb.pt`, ...)
+#### 🎯 Detection (객체 탐지)
+- [yolo11n.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt) | [yolo11s.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt) | [yolo11m.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m.pt) | [yolo11l.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l.pt) | [yolo11x.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x.pt)
+
+#### 🎨 Segmentation (세그멘테이션)
+- [yolo11n-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt) | [yolo11s-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-seg.pt) | [yolo11m-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-seg.pt) | [yolo11l-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-seg.pt) | [yolo11x-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-seg.pt)
+
+#### 🧍 Pose (포즈 추정)
+- [yolo11n-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt) | [yolo11s-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-pose.pt) | [yolo11m-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-pose.pt) | [yolo11l-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-pose.pt) | [yolo11x-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-pose.pt)
+
+#### 🔄 OBB (회전 객체 탐지)
+- [yolo11n-obb.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-obb.pt) | [yolo11s-obb.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-obb.pt) | [yolo11m-obb.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-obb.pt) | [yolo11l-obb.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-obb.pt) | [yolo11x-obb.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-obb.pt)
+
+#### 🖼️ Classification (이미지 분류)
+- [yolo11n-cls.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-cls.pt) | [yolo11s-cls.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-cls.pt) | [yolo11m-cls.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-cls.pt) | [yolo11l-cls.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-cls.pt) | [yolo11x-cls.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-cls.pt)
 
 ---
 
